@@ -12,8 +12,8 @@ import 'swiper/css/navigation';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-// css-star
-import 'css-star-rating/dist/star-rating.min.css';  
+// // css-star
+// import 'css-star-rating/dist/star-rating.min.css';  
 
 // axios
 import axios from 'axios';
