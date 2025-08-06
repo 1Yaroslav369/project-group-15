@@ -1,3 +1,31 @@
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .feedback-section {
   font-family: 'Raleway', sans-serif;
+  margin: 64px 0;
+}
+
+.feedback-title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 36px;
+  /* line-height: 43px; */
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: #080c09;
+}
+
+.feedback-section p {
+  margin-bottom: 80px;
+  font-weight: 400;
+  font-size: 16px;
+
+  /* line-height: 26px; */
+  line-height: 1.6;
+  color: #080c09;
 }
