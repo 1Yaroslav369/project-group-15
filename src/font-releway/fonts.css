@@ -1,47 +1,30 @@
 @font-face {
-  font-family: 'Releway';
-  src:
-    local('Releway Bold'),
-    local('Releway-Bold'),
-    url('Releway-Bold.woff2') format('woff2'),
-    url('Gilroy-Bold.woff') format('woff');
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Releway';
-  src:
-    local('Releway Semibold'),
-    local('Releway-Semibold'),
-    url('Releway-Semibold.woff2') format('woff2'),
-    url('Releway-Semibold.woff') format('woff');
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Releway';
-  src:
-    local('Releway Medium'),
-    local('Releway-Medium'),
-    url('Releway-Medium.woff2') format('woff2'),
-    url('Releway-Medium.woff') format('woff');
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Releway';
-  src:
-    local('Releway Regular'),
-    local('Releway-Regular'),
-    url('Releway-Regular.woff2') format('woff2'),
-    url('Releway-Regular.woff') format('woff');
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
