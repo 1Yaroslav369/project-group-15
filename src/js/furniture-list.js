@@ -1,0 +1,1 @@
+const BASE_URL = 'https://furniture-store.b.goit.study/api';

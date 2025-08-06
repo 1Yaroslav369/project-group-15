@@ -1,0 +1,91 @@
+.furniture-container{
+     min-width: 1440px;
+     padding-top: 60px;
+}
+
+.section-title{
+     font-size: 48px;
+     line-height: 1.2;
+     letter-spacing: 0.01em;
+     color: #080c09;
+     font-weight: 700;
+}
+
+.section-subtitle{
+     margin-bottom: 16px;
+     font-size: 18px;
+     line-height: 1.6;
+     color: #080c09;
+     font-weight: 400;
+}
+
+.category-filter{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 24px;
+     padding: 0;
+     margin: 0;
+}
+
+.category-item{
+     flex: 0 0 auto;
+}
+
+.category-card{
+     width: 100%;
+     height: 122px;
+     overflow: hidden;
+     position: relative;
+     border-radius: 8px;
+     
+}
+
+.category-image {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+     
+}
+
+.category-title{
+     position: absolute;
+     padding: auto 16px;
+     margin: 0;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     line-height: 1.4;
+     font-size: 20px;
+     letter-spacing: 0.01em;
+     color: #fff;
+}
+
+.furniture-list{
+     margin-bottom: 40px;  
+}
+
+
+
+
+.load-more-button{
+     display:block;
+     margin: 0 auto;
+
+     padding: 10px 24px;
+     width: 421px;
+     height: 46px;
+     border-radius: 100px;
+     box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25), inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+     background: #6b0609;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 1.6;
+     color: #fff;
+}
+
+.load-more-button :hover,
+.load-more-button:focus{
+opacity: 0.5;
+}
