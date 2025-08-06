@@ -10,3 +10,10 @@ import 'swiper/css/navigation';
 // iziToast
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+// css-star
+import 'css-star-rating/css/star-rating.min.css';
+// axios
+import axios from 'axios';
+// simpleLightbox
+import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"
