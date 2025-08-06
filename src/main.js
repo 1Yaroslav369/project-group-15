@@ -1,6 +1,7 @@
 // accordion
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
+
 // swiper
 import Swiper from 'swiper';
 import 'swiper/css'; 
@@ -10,10 +11,12 @@ import 'swiper/css/navigation';
 // iziToast
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+
 // css-star
-import 'css-star-rating/css/star-rating.min.css';
+import 'css-star-rating/dist/star-rating.min.css';  
+
 // axios
 import axios from 'axios';
+
 // simpleLightbox
-import SimpleLightbox from "simplelightbox";
-import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"; 
