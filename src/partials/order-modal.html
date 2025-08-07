@@ -1,0 +1,48 @@
+<div class="modal-overlay is-open" data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close-btn" data-modal-close>
+      <svg class="icon-close" width="32" height="32">
+        <use href="./img/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <p class="modal-title">Замовити зворотний зв’язок</p>
+    <form class="modal-form">
+      <div class="modal-field">
+        <label for="user-email" class="modal-label">Email</label>
+        <div class="modal-input-wrap">
+          <input
+            type="text"
+            name="user-email"
+            id="user-email"
+            class="modal-input"
+            placeholder="Дмитро"
+            required
+          />
+        </div>
+      </div>
+      <div class="modal-field">
+        <label for="phone" class="modal-label">Телефон*</label>
+        <div class="modal-input-wrap">
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            class="modal-input"
+            placeholder="+38 (099) 123 22 11"
+            required
+          />
+        </div>
+      </div>
+      <div class="modal-coment-wrap">
+        <label for="user-comment" class="modal-label">Коментар</label>
+        <textarea
+          name="user-comment"
+          id="user-comment"
+          class="modal-textarea"
+          placeholder="Type your message..."
+        ></textarea>
+      </div>
+      <button type="submit" class="modal-btn">Надіслати заявку</button>
+    </form>
+  </div>
+</div>
