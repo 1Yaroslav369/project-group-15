@@ -76,6 +76,7 @@
   }
 
   .hero-container {
+    max-width: 768px;
     align-items: flex-start;
     padding-top: 37px;
     padding-bottom: 37px;
@@ -110,6 +111,7 @@
   .hero-container {
     padding-top: 92.65px;
     padding-bottom: 92.65px;
+    max-width: 1440px;
   }
 }
 
