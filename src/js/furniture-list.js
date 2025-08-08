@@ -1,12 +1,29 @@
 
 
-const API_URL = 'https://furniture-store.b.goit.study/api-docs';
-const categoryFilter = document.getElementById('categoryFilter');
-const furnitureList = document.getElementById('furnitureList');
-const loadMoreBtn = document.getElementById('loadMoreBtn');
+const BASE_URL = 'https://furniture-store.b.goit.study/api/';
 
 
-console.log('Запит відправлено');
-console.log('API_URL:', API_URL);
+const loader = document.querySelector('.loader');
 
-console.log('URL:', `${API_URL}/categories`);
+
+
+
+fetch('https://furniture-store.b.goit.study/api/categories')
+  .then(res => {
+    if (!res.ok) throw new Error('Статус відповіді не ОК');
+    return res.json();
+  })
+  .then(data => console.log('Категорії:', data))
+  .catch(err => console.error('Помилка:', err));
+
+
+
+export function showLoader() {
+     loader.classList.remove('hidden');
+     
+}
+
+export function hideLoader() {
+     loader.classList.add('hidden');
+     
+}
