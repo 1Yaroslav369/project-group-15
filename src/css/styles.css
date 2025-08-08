@@ -8,11 +8,11 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./hero.css');
+@import url(./hero.css);
 @import url('./furniture-list.css');
-@import url('./about-us.css');
-@import url('./FAQ.css');
-@import url('./feadback.css');
-@import url('./furniture-details-modal.css');
-@import url('./order-modal.css');
+@import url(./about-us.css);
+@import url(./FAQ.css);
+@import url(./feadback.css);
+@import url(./furniture-deails-modal.css);
+@import url(./order-modal.css);
 @import url('./footer.css');
