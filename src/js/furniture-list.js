@@ -1,3 +1,4 @@
+import axios from "axios";
 
 
 const BASE_URL = 'https://furniture-store.b.goit.study/api';
@@ -27,10 +28,10 @@ async function fetchFurniture(categoryId = '', page = 1, limit = 8) {
           ? `${BASE_URL}/furnitures?category=${categoryId}&limit=${limit}&page=${page}`
           : `${BASE_URL}/furnitures?limit=${limit}&page=${page}`;
           
-          const response = await fetch(url);
-          if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        
           
-          const data = await response.json();
+          const response = await axios.get(url);
+    const data = response.data;
           
           renderFurniture(data.furnitures, page === 1);
      } catch (error) {
@@ -114,11 +115,11 @@ loadMoreButton.addEventListener('click', () => {
 });
 
 
-
+async function init() {
 await fetchCategoriesIds();
 setupCategoryFilter();
 fetchFurniture(); // початкове завантаження всіх меблів
-async function init() {
+
 }
 
 init();
