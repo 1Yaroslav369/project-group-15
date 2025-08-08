@@ -17,7 +17,7 @@ modal.addEventListener('click', event => {
 document.addEventListener('keydown', handleEscapeKey);
 
 function hideModal() {
-  modal.classList.remove('is-open');
+  modal.classList.toggle('is-open');
   document.removeEventListener('keydown', handleEscapeKey);
 }
 

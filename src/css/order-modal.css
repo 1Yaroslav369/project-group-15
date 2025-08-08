@@ -9,10 +9,10 @@
   opacity: 0;
   pointer-events: none;
 }
-/* Додати до баді */
-/* .modal-open {
+
+.modal-open {
   overflow: hidden;
-} */
+}
 .is-open {
   opacity: 1;
   pointer-events: auto;
