@@ -1,21 +1,127 @@
-.footer {
-  padding: 20px 0;
+/*контейнер*/
+.footer-container {
+  padding: 0 20px 32px 20px;
+  background-color: #6B0609;
+  display: flex;
+  flex-direction: column;
 }
-.footer-desc {
-  text-align: center;
+
+@media screen and (min-width: 768px){
+    .footer-container {
+      padding: 0 32px 32px 32px;
+    }
 }
-.footer-link {
-  position: relative;
+@media only screen and (min-width: 1440px) {
+    .footer-container {
+      padding: 0 64px;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+
+/*лого*/
+.logo-footer{
+  display: flex;
+  justify-content: center;
+  width: 228.5px;
+  height: 97.93px;
+  margin: 0 auto;
 }
-.footer-link::before {
-  content: '';
-  position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+
+.head-soc-icon{
+  width: 228.5px;
+  height: 97.93px;
+  fill:white;
+}
+
+@media only screen and (min-width: 1440px) {
+   .logo-footer{
+    margin-left: 0;
+
+    order: 1;
+   }
+  }
+
+/*меню*/
+.nav-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto;
+  width: 109px;
+  height: 200px;
+}
+
+.nav-list-item{
+  font-size: 16px;
+  color: white;
+}
+
+.nav-link{
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px){
+  .nav-list{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 425px;
+    height: 26px;
+    gap: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+    .footer-nav{
+      order: 3;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    .nav-list{
+      margin: 0;
+      
+    }
+}
+
+/*соц мережі*/
+.footer-social-list{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 1440px) {
+    .footer-social-list{
+      order: 4;
+      align-items: center;
+      margin: 0;
+    } 
+}
+
+/*права*/
+.copyright-stuff-box{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Raleway", Regular;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px){
+  .copyright-stuff-box{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .copyright-stuff-box{
+    order: 2;
+    align-items: center;
+  }
 }
