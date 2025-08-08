@@ -1,18 +1,21 @@
 .hero {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  font-family: 'Raleway', sans-serif;
+  max-width: 100%;
   background-color: #2e2f42;
   background-image: url(../img/bg-mobile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   padding-top: 157.5px;
   padding-bottom: 157.5px;
   text-align: left;
-  width: 100%;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -54,9 +57,8 @@
   line-height: 1.6;
   color: #fff;
   border: none;
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 335px;
-  box-sizing: content-box;
 }
 
 .hero-btn:hover,
@@ -71,11 +73,12 @@
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url(../img/bg-tablet.jpg);
+  }
+
+  .hero-container {
+    align-items: flex-start;
     padding-top: 37px;
     padding-bottom: 37px;
-  }
-  .hero .container {
-    margin-left: 0;
   }
 
   .hero-title {
@@ -102,6 +105,9 @@
 @media screen and (min-width: 1440px) {
   .hero {
     background-image: url(../img/bg-desktop.jpg);
+  }
+
+  .hero-container {
     padding-top: 92.65px;
     padding-bottom: 92.65px;
   }
