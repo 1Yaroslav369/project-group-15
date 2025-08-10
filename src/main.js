@@ -20,3 +20,9 @@ import axios from 'axios';
 
 // simpleLightbox
 import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"; 
+
+import { initHeaderMenu } from '/js/header.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initHeaderMenu();
+});
