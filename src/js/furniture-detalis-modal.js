@@ -37,7 +37,7 @@ function handleOutsideClick(e) {
 
 modalCloseBtn.addEventListener("click", closeModal);
 
-// Функція для створення розмітки модалки
+
 function createModalMarkup(item) {
   const colorsMarkup = item.colors
     .map(color => `<div class="color-option" style="background-color: ${color};"></div>`)
@@ -78,7 +78,7 @@ function createModalMarkup(item) {
   `;
 }
 
-// Функція для отримання даних про меблі
+
 async function getFurnitureById(id) {
   try {
     const { data } = await axios.get(`${API_URL}/furniture/${id}`);
@@ -89,7 +89,7 @@ async function getFurnitureById(id) {
   }
 }
 
-// Ініціалізація обробників подій для елементів меблів
+
 function initFurnitureItems() {
   document.querySelectorAll(".furniture-item").forEach(item => {
     item.addEventListener("click", async () => {
@@ -103,7 +103,7 @@ function initFurnitureItems() {
   });
 }
 
-// Запуск при завантаженні сторінки
+
 document.addEventListener("DOMContentLoaded", () => {
   initFurnitureItems();
 });
