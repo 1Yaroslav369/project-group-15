@@ -43,7 +43,7 @@
 
 @media screen and (min-width: 768px) {
   .section-about-us {
-    width: 768px;
+    /* width: 768px; */
     height: 722px;
     padding-top: 32px;
     padding-bottom: 32px;
