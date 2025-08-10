@@ -115,6 +115,11 @@
      color: #080c09;
      font-weight: 600;
      margin-bottom: 8px;
+     display: inline-block;
+     max-width: 100%;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
 }
 
 .furniture-colors {
