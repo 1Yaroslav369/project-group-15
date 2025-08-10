@@ -17,6 +17,3 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 // axios
 import axios from 'axios';
-
-// simpleLightbox
-import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"; 
