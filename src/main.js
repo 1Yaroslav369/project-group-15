@@ -19,4 +19,14 @@ import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
 // simpleLightbox
+
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"; 
+
+import { initHeaderMenu } from '/js/header.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initHeaderMenu();
+});
+
 // import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"; 
+
