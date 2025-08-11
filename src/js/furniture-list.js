@@ -3,6 +3,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import { getFurnitureById } from './furniture-detalis-modal.js';
 
+
 const BASE_URL = 'https://furniture-store.b.goit.study/api';
 const categoryButtons = document.querySelectorAll('.category-card');
 const furnitureList = document.querySelector('.furniture-list');
@@ -71,7 +72,7 @@ async function fetchFurniture(categoryId = '', page = 1, limit = 8) {
 // Рендеринг списку меблів
 function renderFurniture(furnitureArray, replace = true) {
      const markup = furnitureArray
-         .map(item => {
+     .map(item => {
           const colorCircles = item.color
           .map(
                color => `<span class="furniture-color-circle" style="background-color: ${color};"></span>`
@@ -95,7 +96,6 @@ function renderFurniture(furnitureArray, replace = true) {
      } else {
           furnitureList.insertAdjacentHTML('beforeend', markup);
      }
-
 }
 //отримання ID категорій у кнопки
 async function fetchCategoriesIds() {
@@ -113,6 +113,7 @@ async function fetchCategoriesIds() {
                }
           });
 
+
      } catch (error) {
           console.error('Помилка при підставці ID категорії:', error);
 
@@ -121,7 +122,7 @@ async function fetchCategoriesIds() {
                message: 'Не вдалося завантажити категорії. Спробуйте ще раз.',
                position: 'topRight'
           });
-     }  
+
 }
 //Логіка перемикання категорій
 function setupCategoryFilter() {
@@ -145,6 +146,7 @@ loadMoreButton.addEventListener('click', () => {
      
 });
 
+
 // кнопка детальніше
 furnitureList.addEventListener('click', (event) => {
      const detailsBtn = event.target.closest('.details-btn');
@@ -154,7 +156,7 @@ furnitureList.addEventListener('click', (event) => {
           // console.log(`Кнопка "Детальніше" натиснута! ID: ${furnitureId}`);
          
          
-         if (furnitureId) {
+          if (furnitureId) {
                openFurnitureModal(furnitureId);
           }
      }
@@ -168,6 +170,8 @@ function openFurnitureModal(id) {
 export function getCachedFurniture() {
   return cachedFurniture;
 }
+}
+
 
 async function init() {
 await fetchCategoriesIds();
@@ -176,8 +180,7 @@ fetchFurniture(); // початкове завантаження всіх меб
 
 }
 
+
+
+
 init();
-
-
-
-
