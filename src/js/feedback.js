@@ -1,6 +1,9 @@
 import { getDataFromAPI } from './dataFetch.js';
 import '../css/feadback.css';
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -37,7 +40,6 @@ getDataFromAPI('feedbacks', 1, 10)
     const feedbackFromApi = document.querySelector('.feedback-from-API');
     feedbackFromApi.innerHTML = createSlides(data.feedbacks);
 
-    // зірочки
     $('.raty').raty({
       readOnly: true,
       half: true,
@@ -94,4 +96,32 @@ getDataFromAPI('feedbacks', 1, 10)
       nextBtn.classList.toggle('arrow-disabled', sw.isEnd);
     }
   })
-  .catch(err => console.error('Помилка при отриманні відгуків:', err));
+  .catch(err => {
+    console.error('Помилка при отриманні відгуків:', err);
+
+    iziToast.show({
+      title: 'Помилка',
+      message: err.message || 'Не вдалося завантажити відгуки.',
+      position: 'topCenter',
+      color: '#ef4040',
+      messageColor: '#fff',
+      titleColor: '#fff',
+    });
+
+    const wrapper = document.querySelector('.feedback-from-API');
+    if (wrapper) {
+      wrapper.innerHTML =
+        '<div class="error-text"><p>Не вдалося показати відгуки.</p></div>';
+    }
+
+    const prevBtn = document.querySelector('#prev-btn');
+    const nextBtn = document.querySelector('#next-btn');
+    if (prevBtn) {
+      prevBtn.disabled = true;
+      prevBtn.classList.add('arrow-disabled');
+    }
+    if (nextBtn) {
+      nextBtn.disabled = true;
+      nextBtn.classList.add('arrow-disabled');
+    }
+  });
