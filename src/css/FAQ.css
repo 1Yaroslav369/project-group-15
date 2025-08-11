@@ -246,15 +246,15 @@ h3.question-header.ac-header {
 }
 
 /* Іконка */
-.icon,
-.question .icon {
+.FAQ-icon,
+.question .FAQ-icon {
     /* flex-shrink: 0; */
     fill: #080c09;
     transition: transform 0.25s ease;
 }
 
-.ac.is-active .icon,
-li.FAQ-item.active .icon {
+.ac.is-active .FAQ-icon,
+li.FAQ-item.active .FAQ-icon {
     transform: rotate(180deg);
 }
 
