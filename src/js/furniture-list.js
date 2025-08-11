@@ -30,6 +30,7 @@ async function fetchFurniture(categoryId = '', page = 1, limit = 8) {
           
           const response = await axios.get(url);
           const data = response.data;
+
           if (!data.furnitures || data.furnitures.length === 0) {
                iziToast.info({
                     title: 'Увага',
@@ -71,12 +72,12 @@ function renderFurniture(furnitureArray, replace = true) {
           .join('');
           
           return `
-          <li class="furniture-card">
+          <li class="furniture-card" data-id="${item._id}">
           <img src="${item.images[0]}" alt="${item.name}" class="furniture-image" />
           <h3 class="furniture-name">${item.name}</h3>
           <div class="furniture-colors">${colorCircles}</div>
           <p class="furniture-price">${item.price} грн.</p>
-          <button type="button">Детальніше</button>
+          <button type="button" class="details-btn">Детальніше</button>
           </li>
           `;
      })
@@ -88,7 +89,6 @@ function renderFurniture(furnitureArray, replace = true) {
           furnitureList.insertAdjacentHTML('beforeend', markup);
      }
      
-
 }
 //отримання ID категорій у кнопки
 async function fetchCategoriesIds() {
@@ -96,7 +96,6 @@ async function fetchCategoriesIds() {
           const response = await fetch(`${BASE_URL}/categories`);
           const data = await response.json();
           const categories = data; 
-          
           const categoryButtons = document.querySelectorAll('.category-card');
           // додаємо ID до кожної кнопки по її назві
           categoryButtons.forEach(btn => {
@@ -139,6 +138,24 @@ loadMoreButton.addEventListener('click', () => {
      fetchFurniture(currentCategoryId, currentPage);
      
 });
+
+
+// кнопка детальніше
+furnitureList.addEventListener('click', (event) => {
+     const detailsBtn = event.target.closest('.details-btn');
+     if (detailsBtn) {
+          const card = detailsBtn.closest('.furniture-card');
+          const furnitureId = card?.dataset.id;
+          // console.log(`Кнопка "Детальніше" натиснута! ID: ${furnitureId}`);
+          if (furnitureId) {
+               openFurnitureModal(furnitureId);
+          }
+     }
+     
+});
+
+function openFurnitureModal(id) {
+}
 
 
 async function init() {

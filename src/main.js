@@ -1,6 +1,7 @@
 // accordion
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
+import './js/FAQ-section';
 
 // swiper
 import Swiper from 'swiper';
@@ -18,15 +19,4 @@ import 'izitoast/dist/css/iziToast.min.css';
 // axios
 import axios from 'axios';
 
-// simpleLightbox
-
-import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"; 
-
-import { initHeaderMenu } from '/js/header.js';
-
-document.addEventListener('DOMContentLoaded', () => {
-    initHeaderMenu();
-});
-
-// import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm"; 
 
