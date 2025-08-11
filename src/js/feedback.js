@@ -55,6 +55,7 @@ getDataFromAPI('feedbacks', 1, 10)
     const swiper = new Swiper('.feedback-swiper', {
       modules: [Navigation, Pagination],
       slidesPerView: 1,
+      spaceBetween: 24,
       slidesPerGroup: 1,
       watchOverflow: true,
       breakpoints: {
