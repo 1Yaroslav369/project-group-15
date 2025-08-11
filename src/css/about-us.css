@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 100%; */
+  width: 100%;
   padding-top: 64px;
   padding-bottom: 64px;
   height: auto;
@@ -43,7 +43,7 @@
 
 @media screen and (min-width: 768px) {
   .section-about-us {
-    /* width: 768px; */
+    width: 768px;
     height: 722px;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -70,7 +70,7 @@
     padding-top: 64px;
     padding-bottom: 64px;
     display: flex;
-    /* width: 100%; */
+    width: 100%;
     height: 564px;
     min-width: 1440px;
     height: 564px;
