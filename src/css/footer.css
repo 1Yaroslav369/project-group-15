@@ -47,7 +47,7 @@
 .nav-list{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 24px auto;
   width: 109px;
