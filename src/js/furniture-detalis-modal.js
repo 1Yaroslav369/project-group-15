@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const API_URL = "https://furniture-store.b.goit.study/api";
 const furniture = document.querySelector(".modal-furniture");
 const modalContainer = document.querySelector(".modal-form-container");
@@ -7,51 +8,46 @@ const modalCloseBtn = document.querySelector(".btn-close-modal");
 const modalContent = document.querySelector(".content-modal-form");
 const box = document.querySelector(".example");
 
-//
-// box.addEventListener("click", openModal);
-//
-// console.log("Card clicked, id:", id);
+import { getCachedFurniture } from './furniture-list.js';
 
-// box.addEventListener("click", () => {
-//   const id = box.dataset.id; 
-//   if (id) {
-//     getFurnitureById(id);
-//   }
-// });
-
-export async function getFurnitureById(id) {
-  try {
-    const { data } = await axios.get(`${API_URL}/furniture/${id}`);
-      openModal(data);
-      console.log("API response:", data);
-  } catch (error) {
-    console.error("Помилка завантаження меблів:", error);
-    }
-    
+export function getFurnitureById(id) {
+  const item = getCachedFurniture().find(f => f._id === id);
+  if (item) {
+    openModal(item);
+  }
 }
 
 
 function openModal(item) {
-    // console.log("Item received:", item);
+console.log("Рейтинг:", item.rating);
   modalContent.innerHTML = createModalMarkup(item);
-  furniture.classList.remove("is-hidden");
+    furniture.classList.remove("is-hidden");
+    document.body.style.overflow = 'hidden';
 
-    if (window.$ && $.fn.raty) {
-    $('.raty').raty({
-      readOnly: true,
-      half: true,
-      starType: 'i',
-      score() {
-        return $(this).attr('data-score');
-      },
-    });
+
+    $(modalContent).find('.raty').raty({
+    readOnly: true,
+    half: true,
+    starType: 'i',
+    score: function () {
+      return $(this).attr('data-score');
     }
+  });
 
-    const colorBtns = modalContent.querySelectorAll('.color-btn');
+   const colorBtns = modalContent.querySelectorAll('.color-btn');
+  const mainImage = modalContent.querySelector(".main-image");
+
   colorBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       colorBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+
+        const selectedImage = btn.dataset.img;
+
+
+      if (selectedImage && mainImage) {
+        mainImage.src = selectedImage;
+      }
     });
   });
     
@@ -62,20 +58,20 @@ function openModal(item) {
 }
 
 function closeModal() {
-    // document.body.style.overflow = 'auto';
-
+    document.body.style.overflow = '';
     furniture.classList.add("is-hidden");
 
     modalCloseBtn.removeEventListener("click", closeModal)
     furniture.removeEventListener("click", handleOutsideClick);
     document.removeEventListener("keydown", handleEscClose);
 
-//     const orderBtn = modalContent.querySelector(".btn-order");
-//   if (orderBtn) {
-//     orderBtn.addEventListener("click", () => {
-//       closeModal();
-//       openOrderModal();
-//     });
+    const orderBtn = modalContent.querySelector(".btn-order");
+  if (orderBtn) {
+    orderBtn.addEventListener("click", () => {
+      closeModal();
+      openOrderModal();
+    });
+  }
 }
 
 function handleOutsideClick(e) {
@@ -90,14 +86,17 @@ function handleEscClose(e) {
   }
 }
 
-
 export function createModalMarkup(item) {
-    const colorsMarkup = Array.isArray(item.colors)
-        ? item.colors.map((color, idx) =>
-            `<button class="color-btn${idx === 0 ? ' active' : ''}" style="background-color:${color};" data-color="${color}"></button>`
-        )
-            .join("")
-        : "";
+ const colorsMarkup = Array.isArray(item.color)
+  ? item.color.map((color, idx) =>
+      `<button 
+        class="color-btn${idx === 0 ? ' active' : ''}" 
+        style="background-color:${color};" 
+        data-color="${color}" 
+        data-img="${item.colorImages?.[color] || item.images?.[0]}"
+      ></button>`
+    ).join("")
+  : "";
 
   const images = Array.isArray(item.images) ? item.images.slice(0, 3) : [];
   const galleryMarkup = images.map((img, idx) => {
@@ -108,20 +107,21 @@ export function createModalMarkup(item) {
   }).join("")
 
   return `
-    <div class="modal-content-inner">
       <div class="gallery">${galleryMarkup}</div>
-      <h2>${item.name}</h2>
-      <p class="type">${item.type}</p>
-      <p class="price">${item.price} грн</p>
-      <div class="raty" data-score="${item.rating || 0}"></div>
-      <span>${item.rating || "Немає оцінки"}</span>
-      <div class="colors">
-        <span>Колір</span>
-        <div class="color-list">${colorsMarkup}</div>
-      </div>
-      <p class="description">${item.description}</p>
-      <p class="sizes">Розміри: ${item.sizes}</p>
-      <button class="btn-order" type="submit">Перейти до замовлення</button>
-    </div>
+              <div class="name-details">
+              <h2 class="name">${item.name}</h2>
+              <p class="type">${item.type}</p>
+              </div>
+              <div class="details">
+              <p class="price">${item.price} грн</p>
+              <div class="raty" data-score="${item.rate || 0}"></div>
+              <div class="colors">
+                <span>Колір</span>
+                <div class="color-list">${colorsMarkup}</div>
+              </div>
+              <p class="description">${item.description}</p>
+              <p class="sizes">Розміри: ${item.sizes}</p>
+              <button class="btn-order" type="submit">Перейти до замовлення</button>
+              </div>
   `;
 }

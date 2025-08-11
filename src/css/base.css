@@ -1,7 +1,7 @@
 body {
-  font-family: "Raleway", Bold;
-    background-color: #fff;
-    font-size: 18px;
+  font-family: 'Raleway', Bold;
+  background-color: #fff;
+  font-size: 18px;
 }
 
 main {
@@ -10,3 +10,5 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+
+@import 'css-star-rating/dist/css/star-rating.min.css';

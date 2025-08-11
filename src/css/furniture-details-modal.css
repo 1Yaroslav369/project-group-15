@@ -1,16 +1,3 @@
-/* .example {
-  top: 0;
-  left: 0;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  width: 139px;
-  height: 197px;
-  color: #080c09;
-  background-color: #080c09;
-} */
-
 .modal-furniture {
   position: fixed;
   top: 0;
@@ -37,9 +24,10 @@
   border-radius: 8px;
   padding: 64px 20px;
   width: 335px;
-  height: 1300px;
-  background: #fff;
+  height: 1155px;
   overflow-y: auto;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 .modal-furniture.is-hidden {
@@ -59,6 +47,14 @@
   height: 32px;
 }
 
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  opacity: 0.5;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .icon-close-modal {
   fill: #080c09;
 }
@@ -73,32 +69,20 @@
   justify-content: flex-start;
   flex-direction: row;
   gap: 16px;
-  width: 295px;
+  width: 100%;
   height: 510px;
 }
 
-.zero {
+.main-image {
   border-radius: 8px;
   width: 295px;
   height: 297px;
-  background-color: #6b0609;
-  border: 1px solid #201a19;
 }
 
-.first {
+.thumb-image {
   border-radius: 8px;
   width: 139px;
   height: 197px;
-  background-color: #6b0609;
-  border: 1px solid #201a19;
-}
-
-.second {
-  border-radius: 8px;
-  width: 139px;
-  height: 197px;
-  background-color: #6b0609;
-  border: 1px solid #201a19;
 }
 
 .name {
@@ -118,6 +102,14 @@
   color: #080c09;
 }
 
+.details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .price {
   font-weight: 700;
   font-size: 24px;
@@ -126,11 +118,17 @@
   color: #080c09;
 }
 
-.rating {
+.raty {
+  border-radius: 64px;
+}
+
+.raty i {
+  font-size: 24px; /* або інше значення, якого хочеш */
+  width: 16px;
+  height: 16px;
 }
 
 .colors {
-  padding-top: 64px;
 }
 
 .span-color {
@@ -141,6 +139,30 @@
 }
 
 .color-list {
+  padding-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.color-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.color-btn:hover,
+.color-btn:focus {
+  opacity: 0.5;
+}
+
+.color-btn.active {
+  border: 4px solid #838584;
 }
 
 .description {
@@ -148,7 +170,6 @@
   font-size: 16px;
   line-height: 1.6;
   color: #080c09;
-  padding-top: 24px;
 }
 
 .sizes {
@@ -156,7 +177,7 @@
   font-size: 16px;
   line-height: 1.6;
   color: #080c09;
-  padding-top: 32px;
+  padding-top: 8px;
 }
 
 .btn-order {
@@ -167,7 +188,7 @@
   gap: 8px;
   border-radius: 100px;
   border: none;
-  padding: 10px 24px;
+  padding: 10px;
   width: 295px;
   height: 46px;
   box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
@@ -179,4 +200,135 @@
   font-size: 16px;
   line-height: 1.6;
   color: #fff;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-order:hover,
+.btn-order:focus {
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: #6b0609;
+  opacity: 0.5;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .modal-form-container {
+    width: 704px;
+  }
+
+  .gallery {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  .main-image {
+    width: 640px;
+    height: 297px;
+  }
+
+  .thumb-image {
+    width: 312px;
+    height: 197px;
+  }
+
+  .content-modal-form {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 0px 0px 32px 0px;
+    width: 640px;
+    height: 1048px;
+  }
+
+  .description {
+    width: 421px;
+    height: 78px;
+  }
+
+  .btn-order {
+    width: 310px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .modal-form-container {
+    padding: 64px;
+    width: 1090px;
+    height: 649px;
+  }
+
+  .content-modal-form {
+    width: 962px;
+    height: 521px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .gallery {
+    width: 580px;
+    height: 521px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+    margin-right: auto;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main-image {
+    width: 580px;
+    height: 308px;
+  }
+
+  .thumb-image {
+    width: 282px;
+    height: 197px;
+  }
+
+  .description {
+    width: 358px;
+    height: 78px;
+  }
+
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: auto;
+  }
+
+  .name-detalis {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .name {
+    padding: 0;
+    max-width: 358px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .sizes {
+    padding-bottom: 8px;
+  }
 }
