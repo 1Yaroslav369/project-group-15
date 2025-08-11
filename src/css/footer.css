@@ -125,3 +125,10 @@
     align-items: center;
   }
 }
+
+#furniture-list,
+#about-us,
+#faq,
+#feedback {
+  scroll-margin-top: 72px;
+}
