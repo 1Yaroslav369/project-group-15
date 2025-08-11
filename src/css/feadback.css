@@ -168,6 +168,9 @@ button {
   .feedback-card {
     margin-bottom: 48px;
   }
+  .swiper-slide {
+    padding-right: 48px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
