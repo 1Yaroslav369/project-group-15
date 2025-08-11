@@ -166,12 +166,10 @@ h3.question-header.ac-header {
 } */
 
 
-
-.FAQ-section {
+section#FAQ.FAQ-section.container {
     padding: 32px 0;
     background-color: #fff;
 }
-
 .FAQ-title {
     font-weight: 700;
     font-size: 24px;
@@ -287,6 +285,8 @@ p.text-item-list.ac-text {
     padding-bottom: 24px;
 }
 
+
+
 /* Вимикаємо дефолтний plus від accordion-js */
 .ac-trigger::after {
     display: none !important;
@@ -294,10 +294,9 @@ p.text-item-list.ac-text {
 
 /* ==== Адаптиви ==== */
 @media only screen and (min-width: 768px) {
-    .FAQ-section {
+    section#FAQ.FAQ-section.container {
             padding: 48px 0;
         }
-    
     .FAQ-title {
         font-size: 48px;
     }
@@ -308,9 +307,8 @@ p.text-item-list.ac-text {
     }
 
 }
-
 @media only screen and (min-width: 1440px) {
-    .FAQ-section {
+    section#FAQ.FAQ-section.container {
         padding: 80px 264px;
 
     }
