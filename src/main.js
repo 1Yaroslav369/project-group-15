@@ -18,4 +18,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 // axios
 import axios from 'axios';
 
+// header
+import { initHeaderMenu } from './js/header.js'; 
 
+document.addEventListener('DOMContentLoaded', () => {
+    initHeaderMenu();
+});
