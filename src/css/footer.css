@@ -8,12 +8,12 @@
 
 @media screen and (min-width: 768px){
     .footer-container {
-      padding: 0 32px 32px 32px;
+      padding: 0 32px 32px 32px !important;
     }
 }
 @media only screen and (min-width: 1440px) {
     .footer-container {
-      padding: 0 64px;
+      padding: 0 64px !important;
       flex-direction: row;
       justify-content: space-around;
     }
