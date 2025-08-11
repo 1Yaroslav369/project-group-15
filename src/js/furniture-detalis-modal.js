@@ -63,13 +63,14 @@ function closeModal() {
 
     modalCloseBtn.removeEventListener("click", closeModal)
     furniture.removeEventListener("click", handleOutsideClick);
-    document.removeEventListener("keydown", handleEscClose);
+  document.removeEventListener("keydown", handleEscClose);
+  
 
-    const orderBtn = modalContent.querySelector(".btn-order");
+const orderBtn = modalContent.querySelector(".btn-order");
   if (orderBtn) {
     orderBtn.addEventListener("click", () => {
       closeModal();
-      openOrderModal();
+      hideModal();
     });
   }
 }
