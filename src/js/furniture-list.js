@@ -1,7 +1,7 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { getFurnitureById } from './furniture-detalis-modal.js';
+import { getFurnitureById } from './furniture-details-modal.js';
 
 const BASE_URL = 'https://furniture-store.b.goit.study/api';
 const categoryButtons = document.querySelectorAll('.category-card');
