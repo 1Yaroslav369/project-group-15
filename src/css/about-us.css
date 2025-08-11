@@ -1,0 +1,108 @@
+.section-about-us {
+  background-color: #f0e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  height: auto;
+  font-family: "Raleway", sans-serif;
+}
+
+@media (min-width: 375px) {
+  .section-about-us {
+    height: 837px;
+  }
+}
+
+.about-us-title {
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: #080c09;
+}
+
+.about-us-text {
+  padding-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #080c09;
+}
+
+.about-img {
+  padding-top: 24px;
+  border-radius: 8px;
+  height: auto;
+}
+
+/*  !Tablet  */
+
+@media screen and (min-width: 768px) {
+  .section-about-us {
+    height: 722px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .about-us-title {
+    font-size: 48px;
+  }
+
+  .about-us-text {
+    font-size: 18px;
+  }
+
+  .about-img {
+    max-width: 704px;
+    height: auto;
+  }
+}
+
+/* ! PC */
+
+@media screen and (min-width: 1440px) {
+  .section-about-us {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    height: 564px;
+    min-width: 1440px;
+    height: 564px;
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+
+  .about-text {
+    height: 198px;
+    gap: 0;
+    width: 647px;
+    margin-top: 119px;
+    margin-bottom: 119px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .about-us-title {
+    height: 58px;
+    
+  }
+
+  .wrpapper {
+    display: flex;
+    width: 1318px;
+  }
+
+  .about-img {
+    padding-top: 0;
+    padding-left: 24px;
+  }
+}
+
+
+
