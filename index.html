@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Меблерія</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"/>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/raty-js/lib/jquery.raty.css"
+      href="https://cdn.jsdelivr.net/npm/raty-js/lib/jquery.raty.css"/>
     />
     <link
       rel="stylesheet"
@@ -16,13 +18,427 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/project-group-15/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-group-15/assets/vendor-WM8bFQgC.js">
-    <link rel="stylesheet" crossorigin href="/project-group-15/assets/vendor-CN_4j6b_.css">
-    <link rel="stylesheet" crossorigin href="/project-group-15/assets/index-BvzIfm7H.css">
+    <link rel="modulepreload" crossorigin href="/project-group-15/assets/vendor-HAKI6AzT.js">
+    <link rel="stylesheet" crossorigin href="/project-group-15/assets/vendor-Ghpn2VZ4.css">
+    <link rel="stylesheet" crossorigin href="/project-group-15/assets/index-Xvy_iZvd.css">
   </head>
   <body>
     
     <main>
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-container container">
+        <h1 class="hero-title">Створіть свій ідеальний дім</h1>
+        <p class="hero-text">
+          Відкрийте для себе колекцію стильних та комфортних меблів, які
+          перетворять ваш простір. Наша продукція поєднує в собі елегантність та
+          функціональність.
+        </p>
+        <button class="hero-btn" onclick="this.blur()">
+          Що про нас думають
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
+
+        
+<section class="furniture-section" id="furniture-list">
+ <div class="container furniture-container">
+        <h2 class="section-title">Наші меблі</h2>
+        <p class="section-subtitle">
+          Знайдіть ідеальні рішення для вашого інтер'єру
+        </p>
+        <ul class="category-filter" id="categoryFilter">
+          <li class="category-item">
+            <button class="category-card active" data-id="" type="button" data-name="Всі товари">
+              <picture>
+            <img srcset="/project-group-15/assets/1-B4O3qk3Q.png 1x, /project-group-15/assets/1@2x-PFlRU9EH.png 2x" src="/project-group-15/assets/1-B4O3qk3Q.png" alt="A stylish furniture showroom interior featuring a variety of modern pieces: a gray fabric sofa, a wooden dining table with chairs, a bed with neutral linens, a wardrobe, and a dresser — all arranged in a spacious, well-lit studio with natural lighting and soft shadows, showcasing a curated collection in a cohesive contemporary style" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Всі товари</h3>
+              
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="М'які меблі">
+              <picture>
+                <img srcset="/project-group-15/assets/2-DaDAPSwy.png 1x, /project-group-15/assets/2@2x-BenysKRj.png 2x"  src="/project-group-15/assets/2-DaDAPSwy.png" alt="A modern fabric sofa with clean lines, neutral gray upholstery, two soft cushions, and wooden legs, placed in a bright minimalist living room with large windows and light wooden flooring" width="166" class="category-image">
+                
+          </picture>
+          <h3 class="category-title">М'які меблі</h3>
+        </button>
+        </li>
+      
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Шафи та системи зберігання">
+            <picture>
+            <img srcset="/project-group-15/assets/3-C9qsAHbX.png 1x, /project-group-15/assets/3@2x-V2vRyCfV.png 2x"  src="/project-group-15/assets/3-C9qsAHbX.png" alt="A sleek wooden wardrobe with sliding doors and matte finish, standing against a white wall in a Scandinavian-style bedroom with soft ambient lighting and a beige rug" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Шафи та системи зберігання</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Ліжка та матраци">
+            <picture>
+            <img srcset="/project-group-15/assets/4-CjbKm9dL.png 1x, /project-group-15/assets/4@2x-C0bEN7K5.png 2x"  src="/project-group-15/assets/4-CjbKm9dL.png" alt="A queen-size bed with a tufted headboard, layered white and beige linens, and a wool throw blanket, placed in a cozy bedroom with warm lighting and modern decor" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Ліжка та матраци</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Столи">
+            <picture>
+            <img srcset="/project-group-15/assets/5-BQBIucIq.png 1x, /project-group-15/assets/5@2x-Cqb-7OiW.png 2x"  src="/project-group-15/assets/5-BQBIucIq.png" alt="A modern oak dining table with a natural finish and minimalist design, surrounded by four chairs, in a bright dining area with ceramic flooring and indoor plants nearby" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Столи</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Стільці та табурети">
+            <picture>
+            <img srcset="/project-group-15/assets/6-DleO2yK9.png 1x, /project-group-15/assets/6@2x-t_CyQCvR.png 2x"  src="/project-group-15/assets/6-DleO2yK9.png" alt="A set of four elegant wooden dining chairs with curved backrests and woven seats, displayed on a neutral background with soft shadows and even studio lighting" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Стільці та табурети</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Кухні">
+            <picture>
+            <img srcset="/project-group-15/assets/7-HNX7uDuH.png 1x, /project-group-15/assets/7@2x-Di7Mjuev.png 2x"  src="/project-group-15/assets/7-HNX7uDuH.png" alt="A modern open kitchen interior with white cabinets, wooden countertops, a central island with bar stools, hanging pendant lights, and natural daylight coming through large windows — styled in a Scandinavian minimalist aesthetic" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Кухні</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Меблі для дитячої">
+            <picture>
+            <img srcset="/project-group-15/assets/8-GTteRnOF.png 1x, /project-group-15/assets/8@2x-CR8qKV1a.png 2x" src="/project-group-15/assets/8-GTteRnOF.png" alt="A bright and playful children's room with a small wooden bed, colorful storage units, a bookshelf with toys, a cozy rug, and wall decorations — designed in a cheerful and soft palette with natural light" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Меблі для дитячої</h3>
+        </button>
+        </li> 
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Меблі для офісу">
+            <picture>
+            <img srcset="/project-group-15/assets/9-DAme2n5E.png 1x, /project-group-15/assets/9@2x-BAYbAXs_.png 2x"  src="/project-group-15/assets/9-DAme2n5E.png" alt="A modern home office setup with a sleek wooden desk, ergonomic chair, minimalist shelving unit with decor, a laptop, and a neutral color scheme — placed in a clean, organized, and well-lit workspace" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Меблі для офісу</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Меблі для передпокою">
+            <picture>
+            <img srcset="/project-group-15/assets/10-DB62gAtL.png 1x, /project-group-15/assets/10@2x-B65iUuMS.png 2x"  src="/project-group-15/assets/10-DB62gAtL.png" alt="A stylish entryway with a narrow wooden console table, wall-mounted mirror, storage bench with cushions, and a shoe rack, set against a light wall with natural lighting and minimalist decor" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Меблі для передпокою</h3>
+        </button>
+        </li>
+          <li class="category-item">
+           <button class="category-card" type="button" data-id="" data-name="Меблі для ванної кімнати">
+            <picture>
+            <img srcset="/project-group-15/assets/11-CjuUsvC_.png 1x, /project-group-15/assets/11@2x-DR6synB4.png 2x" src="/project-group-15/assets/11-CjuUsvC_.png" alt="A contemporary bathroom with a wooden vanity cabinet, ceramic sink, large round mirror, soft lighting, and neatly folded towels — featuring light tiles and modern fixtures in a calming, spa-like atmosphere" width="166" class="category-image">
+          </picture> 
+          <h3 class="category-title">Меблі для ванної кімнати</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Садові та вуличні меблі">
+            <picture>
+            <img srcset="/project-group-15/assets/12-yjroqUig.png 1x, /project-group-15/assets/12@2x-SSFtkZwy.png 2x" src="/project-group-15/assets/12-yjroqUig.png" alt="A cozy outdoor patio scene with a rattan lounge set, cushions in earthy tones, a coffee table with drinks, potted plants, and ambient lighting — set in a backyard garden during golden hour" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Садові та вуличні меблі</h3>
+        </button>
+        </li>
+          <li class="category-item">
+            <button class="category-card" type="button" data-id="" data-name="Декор та аксесуари">
+            <picture>
+            <img srcset="/project-group-15/assets/13-BzvRYJ7S.png 1x, /project-group-15/assets/13@2x-CPMmrcNl.png 2x" src="/project-group-15/assets/13-BzvRYJ7S.png" alt="A curated collection of home decor items arranged on wooden shelves: ceramic vases, abstract sculptures, candles, and framed art — photographed in soft daylight with a warm, minimalist interior backdrop" width="166" class="category-image">
+          </picture>
+          <h3 class="category-title">Декор та аксесуари</h3>
+        </button>
+        </li>
+        </ul>
+        <ul class="furniture-list" id="furnitureList">
+      </ul>
+      <div class="loader hidden"></div>
+        <button class="load-more-button" id="loadMoreBtn">Показати ще</button>
+      </div>
+    </section>
+
+
+        <section class="section-about-us" id="about-us">
+  <div class="container">
+<div class="wrpapper">
+      <div class="about-text">
+        <h2 class="about-us-title">Про Меблерію</h2>
+        <p class="about-us-text">
+          У Меблерії ми прагнемо створювати затишок та функціональність у кожному
+          домі. Наша місія - пропонувати високоякісні меблі, що поєднують у собі
+          сучасний дизайн, довговічність та доступність. Ми віримо, що ідеальний
+          інтер'єр починається з правильних меблів.
+        </p>
+      </div>
+      <div class="about-img">
+        <picture class="images-people">
+          <source
+          srcset="/project-group-15/assets/people-1x-pc-C_YW9mY4.png, /project-group-15/assets/people-2x-pc-Bo-6aob2.png"
+          media="(min-width: 1440px)"
+          />
+  
+          <source
+            srcset="/project-group-15/assets/people-1x-tab-B5_pZY3l.png, /project-group-15/assets/people-2x-tab-FO3W0Bv9.png"
+            
+            media="(min-width: 768px)"
+          />
+        
+          <img
+            src="/project-group-15/assets/people-1x-mobile-fPlnj5AC.png"
+            srcset="/project-group-15/assets/people-2x-mobile-IRvTXgLq.png"
+            alt="About Us image">
+        </picture>
+</div>
+    </div>
+
+  </div>
+</section>
+
+        <section class="FAQ-section container" id="faq">
+    <div class="container">
+        <h2 class="FAQ-title">Часті питання</h2>
+        <div class="accordion-container-FAQ">
+            <ul class="FAQ-list">
+                <li class="FAQ-item ac">
+                    <div class="question ac-header">
+                        <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button"><h3 class="question-header ac-header">Як здійснюється доставка меблів?</h3>
+                        </button>
+                        <svg class="icon" width="32" height="32">
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="ac-panel">
+                        <p class="text-item-list ac-text">Ми доставляємо замовлення по всій Україні через надійні
+                            служби. Термін доставки зазвичай складає 3–7 днів залежно від регіону.</p>
+                    </div>
+                </li>
+                <li class="FAQ-item ac">
+                    <div class="question ac-header">
+                        <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button">
+                            <h3 class="question-header ac-header">Чи є можливість вибрати колір або матеріал?</h3>
+                        </button>
+                        <svg class="icon" width="32" height="32">
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="ac-panel">
+                        <p class="text-item-list ac-text">Так, у багатьох моделях доступні варіанти оббивки та кольорів.
+                            Усі доступні опції вказані
+                            на сторінці товару.</p>
+                    </div>
+                </li>
+                <li class="FAQ-item ac">
+                    <div class="question ac-header">
+                        
+                        <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button">
+                            <h3 class="question-header ac-header">Чи можна повернути товар, якщо він не підійшов?</h3>
+                        </button>
+                        <svg class="icon" width="32" height="32">
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="ac-panel">
+                        <p class="text-item-list ac-text">Так, ви можете повернути товар протягом 14 днів, якщо він не
+                            був у користуванні та
+                            збережений у первинному вигляді.</p>
+                    </div>
+                </li>
+                <li class="FAQ-item ac">
+                    <div class="question ac-header">
+                        <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button"><h3 class="question-header ac-header">Чи надаєте ви послугу збирання меблів?</h3></button>
+                        <svg class="icon" width="32" height="32">
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="ac-panel">
+                        <p class="text-item-list ac-text">Так, під час оформлення замовлення можна обрати послугу
+                            збирання. Наші майстри зберуть
+                            меблі у зручний для вас час.</p>
+                    </div>
+                </li>
+                <li class="FAQ-item ac">
+                    <div class="question ac-header">
+                <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button"><h3 class="question-header ac-header">Як здійснити оплату</h3>
+                </button>
+                <svg class="FAQ-btn-icon" width="32" height="32">
+                    <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
+                </svg>
+            </div>
+            <div class="ac-panel">
+                <p class="text-item-list ac-text">Ми приймаємо оплату карткою онлайн, банківським переказом або післяплатою при отриманні.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+</section>
+
+        <section class="feedback-section" id="feedback">
+  <div class="container">
+    <h2 class="feedback-title">Відгуки клієнтів</h2>
+    <p class="comments-descr">
+      Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі.
+    </p>
+
+    <div class="swiper feedback-swiper">
+      <div class="swiper-wrapper feedback-from-API"></div>
+    </div>
+
+    <div class="dots-and-arrows">
+      <div class="pagination-dots" id="feedback-dots"></div>
+
+      <div class="arrow-buttons">
+        <button class="arrow" id="prev-btn" type="button">
+          <svg class="icon" width="24" height="24">
+            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-left-arrow-alt"></use>
+          </svg>
+        </button>
+        <button class="arrow" id="next-btn" type="button">
+          <svg class="icon" width="24" height="24">
+            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-right-arrow-alt"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <div class="modal-furniture is-hidden">
+        <div class="container modal-form-container">
+            <button class="btn-close-modal" type="button">
+                <svg class="icon-close-modal" width="16" height="16">
+                    <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-close"></use>
+                </svg>
+            </button>
+            <div class="content-modal-form">
+        </div>
+    </div>
+          <div class="modal-overlay"  data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close-btn" data-modal-close>
+      <svg class="icon-close" width="32" height="32">
+        <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-close"></use>
+      </svg>
+    </button>
+    <p class="modal-title">Замовити зворотний зв’язок</p>
+    <form class="modal-form">
+      <div class="modal-field">
+        <label for="user-email" class="modal-label">Email</label>
+        <div class="modal-input-wrap">
+          <input
+            type="text"
+            name="user-email"
+            id="user-email"
+            class="modal-input"
+            placeholder="Дмитро"
+            required
+          />
+        </div>
+      </div>
+      <div class="modal-field">
+        <label for="phone" class="modal-label">Телефон*</label>
+        <div class="modal-input-wrap">
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            class="modal-input"
+            placeholder="+38 (099) 123 22 11"
+            required
+          />
+        </div>
+      </div>
+      <div class="modal-coment-wrap">
+        <label for="user-comment" class="modal-label">Коментар</label>
+        <textarea
+          name="user-comment"
+          id="user-comment"
+          class="modal-textarea"
+          placeholder="Type your message..."
+        ></textarea>
+      </div>
+      <button type="submit" class="modal-btn">Надіслати заявку</button>
+    </form>
+  </div>
+</div>
+
+    </main>
+    <footer id="site-footer" class="container footer-container">
+    <div class="logo-footer">
+        <a
+          class="logo-footer-link"
+          href="../index.html"
+        >
+          <svg class="head-soc-icon" width="136" height="32">
+            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-logo"></use>
+          </svg>
+        </a>
+    </div>
+ 
+    <nav class="footer-nav">
+        <ul class="nav-list">
+            <li class="nav-list-item"><a href="#furniture-list" class="nav-link">Наші меблі</a></li>
+            <li class="nav-list-item"><a href="#about-us" class="nav-link">Про нас</a></li>
+            <li class="nav-list-item"><a href="#FAQ" class="nav-link">Часті питання</a></li>
+            <li class="nav-list-item"><a href="#feadback" class="nav-link">Відгуки</a></li>
+        </ul>
+    </nav>
+    
+    <ul class="footer-social-list">
+        <li class="social-item">
+            <a
+            href=" https://www.youtube.com/c/GoIT"
+            target="_blank"
+            class="social-link"
+            >
+            <svg class="icon-footer" height="24" width="24" fill="white">
+                <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-Youtube"></use>
+            </svg>
+            </a>
+        </li> 
+        <li class="social-item">
+            <a
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            class="social-link"
+            >
+            <svg class="icon-footer" height="24" width="24">
+                <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-Instagram"></use>
+            </svg>
+            </a>
+        </li> 
+        <li class="social-item">
+            <a
+                href="https://www.facebook.com/goITclub/"
+                target="_blank"
+                class="social-link">
+            <svg class="icon-footer" height="24" width="24" fill="white">
+                <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-Facebook"></use>
+            </svg>
+            </a>
+        </li>     
+    </ul>
+
+    <div class="copyright-stuff-box">
+      <p class="footer-copyright">&copy; 2025 Relume. Всі права захищені.</p>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.min.js"></script>
       <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -216,7 +632,7 @@
                         <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button"><h3 class="question-header ac-header">Як здійснюється доставка меблів?</h3>
                         </button>
                         <svg class="icon" width="32" height="32">
-                            <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-chevron-down"></use>
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
                         </svg>
                     </div>
                     <div class="ac-panel">
@@ -230,7 +646,7 @@
                             <h3 class="question-header ac-header">Чи є можливість вибрати колір або матеріал?</h3>
                         </button>
                         <svg class="icon" width="32" height="32">
-                            <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-chevron-down"></use>
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
                         </svg>
                     </div>
                     <div class="ac-panel">
@@ -246,7 +662,7 @@
                             <h3 class="question-header ac-header">Чи можна повернути товар, якщо він не підійшов?</h3>
                         </button>
                         <svg class="icon" width="32" height="32">
-                            <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-chevron-down"></use>
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
                         </svg>
                     </div>
                     <div class="ac-panel">
@@ -259,7 +675,7 @@
                     <div class="question ac-header">
                         <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button"><h3 class="question-header ac-header">Чи надаєте ви послугу збирання меблів?</h3></button>
                         <svg class="icon" width="32" height="32">
-                            <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-chevron-down"></use>
+                            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
                         </svg>
                     </div>
                     <div class="ac-panel">
@@ -273,7 +689,7 @@
                 <button class="FAQ-btn ac-trigger" type="button" aria-label="Open-close button"><h3 class="question-header ac-header">Як здійснити оплату</h3>
                 </button>
                 <svg class="FAQ-btn-icon" width="32" height="32">
-                    <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-chevron-down"></use>
+                    <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-chevron-down"></use>
                 </svg>
             </div>
             <div class="ac-panel">
@@ -302,12 +718,12 @@
       <div class="arrow-buttons">
         <button class="arrow" id="prev-btn" type="button">
           <svg class="icon" width="24" height="24">
-            <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-left-arrow-alt"></use>
+            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-left-arrow-alt"></use>
           </svg>
         </button>
         <button class="arrow" id="next-btn" type="button">
           <svg class="icon" width="24" height="24">
-            <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-right-arrow-alt"></use>
+            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-right-arrow-alt"></use>
           </svg>
         </button>
       </div>
@@ -315,12 +731,11 @@
   </div>
 </section>
 
-      
       <div class="modal-overlay"  data-modal>
   <div class="modal">
     <button type="button" class="modal-close-btn" data-modal-close>
       <svg class="icon-close" width="32" height="32">
-        <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-close"></use>
+        <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-close"></use>
       </svg>
     </button>
     <p class="modal-title">Замовити зворотний зв’язок</p>
@@ -373,7 +788,7 @@
           href="../index.html"
         >
           <svg class="head-soc-icon" width="136" height="32">
-            <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-logo"></use>
+            <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-logo"></use>
           </svg>
         </a>
     </div>
@@ -395,7 +810,7 @@
             class="social-link"
             >
             <svg class="icon-footer" height="24" width="24" fill="white">
-                <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-Youtube"></use>
+                <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-Youtube"></use>
             </svg>
             </a>
         </li> 
@@ -406,7 +821,7 @@
             class="social-link"
             >
             <svg class="icon-footer" height="24" width="24">
-                <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-Instagram"></use>
+                <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-Instagram"></use>
             </svg>
             </a>
         </li> 
@@ -416,7 +831,7 @@
                 target="_blank"
                 class="social-link">
             <svg class="icon-footer" height="24" width="24" fill="white">
-                <use href="/project-group-15/assets/symbol-defs-DWYe8hks.svg#icon-Facebook"></use>
+                <use href="/project-group-15/assets/symbol-defs-Dm9xIIl8.svg#icon-Facebook"></use>
             </svg>
             </a>
         </li>     
