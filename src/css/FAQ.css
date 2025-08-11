@@ -166,6 +166,7 @@ h3.question-header.ac-header {
 } */
 
 
+
 section#FAQ.FAQ-section.container {
     padding: 32px 0;
     background-color: #fff;
@@ -197,6 +198,7 @@ li.FAQ-item,
 li.FAQ-item.ac {
     border: none;
     border-bottom: 1px solid rgba(8, 12, 9, 0.15);
+    max-width: 865px;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -277,12 +279,13 @@ li.FAQ-item.active .ac-panel {
 
 .text-item-list,
 p.text-item-list.ac-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #080c09;
-    font-weight: 400;
-    padding: 0;
-    padding-bottom: 24px;
+    font-size: 16px !important;
+    font-family: "Raleway", sans-serif !important;
+    line-height: 1.6 !important;
+    color: #080c09 !important;
+    font-weight: 400 !important;
+    padding: 0 !important;
+    padding-bottom: 24px !important;
 }
 
 
