@@ -1,11 +1,3 @@
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
-@import url('../font-releway/fonts.css');
-
-/* Sections style */
 
 /* Common styles */
 @import url('./reset.css');

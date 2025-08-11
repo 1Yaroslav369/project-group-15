@@ -18,5 +18,3 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 // axios
 import axios from 'axios';
-
-

@@ -1,6 +1,7 @@
 import axios from "axios";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import { getFurnitureById } from './furniture-detalis-modal.js';
 
 
 const BASE_URL = 'https://furniture-store.b.goit.study/api';
@@ -11,6 +12,7 @@ const loader = document.querySelector('.loader');
 
 let currentCategoryId = '';
 let currentPage = 1;
+let cachedFurniture = [];
 
 export function showLoader() {
      loader.classList.remove('hidden');
@@ -29,7 +31,13 @@ async function fetchFurniture(categoryId = '', page = 1, limit = 8) {
           : `${BASE_URL}/furnitures?limit=${limit}&page=${page}`;
           
           const response = await axios.get(url);
-          const data = response.data;
+         const data = response.data;
+         
+         if (page === 1) {
+  cachedFurniture = [...data.furnitures]; // якщо нова категорія або перше завантаження
+} else {
+  cachedFurniture = [...cachedFurniture, ...data.furnitures]; // додаємо до попередніх
+}
 
           if (!data.furnitures || data.furnitures.length === 0) {
                iziToast.info({
@@ -88,7 +96,6 @@ function renderFurniture(furnitureArray, replace = true) {
      } else {
           furnitureList.insertAdjacentHTML('beforeend', markup);
      }
-     
 }
 //отримання ID категорій у кнопки
 async function fetchCategoriesIds() {
@@ -115,7 +122,7 @@ async function fetchCategoriesIds() {
                message: 'Не вдалося завантажити категорії. Спробуйте ще раз.',
                position: 'topRight'
           });
-     }
+
 }
 //Логіка перемикання категорій
 function setupCategoryFilter() {
@@ -147,6 +154,8 @@ furnitureList.addEventListener('click', (event) => {
           const card = detailsBtn.closest('.furniture-card');
           const furnitureId = card?.dataset.id;
           // console.log(`Кнопка "Детальніше" натиснута! ID: ${furnitureId}`);
+         
+         
           if (furnitureId) {
                openFurnitureModal(furnitureId);
           }
@@ -155,6 +164,12 @@ furnitureList.addEventListener('click', (event) => {
 });
 
 function openFurnitureModal(id) {
+    getFurnitureById(id);
+}
+
+export function getCachedFurniture() {
+  return cachedFurniture;
+}
 }
 
 
@@ -164,5 +179,8 @@ setupCategoryFilter();
 fetchFurniture(); // початкове завантаження всіх меблів
 
 }
+
+
+
 
 init();
