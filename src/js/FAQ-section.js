@@ -1,8 +1,5 @@
-
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-
-
+import Accordion from "accordion-js";
+import "accordion-js/dist/accordion.min.css";
 
 new Accordion('.accordion-container-FAQ', {
   duration: 900,
@@ -11,6 +8,7 @@ new Accordion('.accordion-container-FAQ', {
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.FAQ-item');
+  const faqs = document.querySelectorAll('.FAQ-item');
   faqs.forEach(faq =>
     faq.addEventListener('click', () => {
       faq.classList.toggle('active');
@@ -30,4 +28,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-const faqs = document.querySelectorAll('.FAQ-item');

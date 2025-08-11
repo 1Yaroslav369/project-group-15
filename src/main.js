@@ -1,6 +1,7 @@
 // accordion
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
+import './js/FAQ-section';
 
 // swiper
 import Swiper from 'swiper';
