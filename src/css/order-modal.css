@@ -1,0 +1,149 @@
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 335px;
+  position: absolute;
+  top: 50%;
+  z-index: 101;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 64px 20px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #080c09;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+
+.modal-field {
+  margin-bottom: 24px;
+}
+.modal-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #080c09;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.modal-input {
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  border-radius: 12px;
+  padding: 8px 12px;
+  width: 100%;
+  height: 42px;
+  background: rgba(8, 12, 9, 0.05);
+}
+
+.modal-coment-wrap {
+  margin-bottom: 24px;
+}
+.modal-textarea {
+  width: 100%;
+  height: 180px;
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  background: rgba(8, 12, 9, 0.05);
+  border-radius: 12px;
+  padding: 12px;
+}
+.modal-btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #fff;
+  border-radius: 100px;
+  padding: 10px 24px;
+  margin: 0 auto;
+  display: block;
+  width: 295px;
+  height: 46px;
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05),
+    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  background: #6b0609;
+  border: none;
+  transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover {
+  background: rgba(8, 12, 9, 0.05);
+  color: #080c09;
+}
+
+.modal-btn:focus {
+  background: rgba(8, 12, 9, 0.05);
+  color: #080c09;
+}
+
+.modal-btn:active {
+  background: #fff;
+  border: none;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 704px;
+    padding: 64px;
+  }
+
+  .modal-title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal {
+    width: 866px;
+  }
+  .modal-title {
+    margin-bottom: 48px;
+    max-width: 530px;
+    display: block;
+  }
+}
