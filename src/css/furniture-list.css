@@ -1,4 +1,10 @@
 /* Styles for Mobile devices */
+.furniture-section {
+     padding-bottom: 48px;
+     padding-top: 48px;
+     
+}
+
 .furniture-container{
      padding-top: 48px;
 
@@ -301,6 +307,11 @@ opacity: 0.8;
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
+     .furniture-section {
+          padding-bottom: 80px;
+          padding-top: 80px;
+     }
+
      .furniture-container{
           padding-top: 60px;
      }
