@@ -1,0 +1,315 @@
+/* .FAQ-section {
+    padding: 48px 0;
+    background-color: #fff;
+}
+
+.FAQ-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #080c09;
+    margin-bottom: 32px;
+}
+
+.accordion-container-FAQ {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.FAQ-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.FAQ-item {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 24px 0;
+    transition: background-color 0.25s ease;
+    margin: 0;
+}
+
+.FAQ-item:hover {
+    background-color: #FAFAFA;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border: none;
+    border-bottom: #09d33c;
+}
+
+.question-header {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    border: none;
+    margin: 0;
+    flex: 1;
+}
+
+
+.FAQ-btn {
+    background: none;
+    border: none;
+    margin: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.icon {}
+
+.FAQ-btn svg {
+    transition: transform 0.25s ease;
+    fill: #333333;
+
+}
+
+.ac.is-active .FAQ-btn svg {
+    transform: rotate(180deg);
+}
+
+
+.FAQ-item.active .FAQ-btn svg {
+    transform: rotate(180deg);
+}
+
+.ac {
+    border: none;
+    margin: 0;
+}
+
+.ac-panel {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border: none;
+    transition: max-height 0.25s ease, opacity 0.25s ease;
+}
+
+.FAQ-item.active .ac-panel {
+    max-height: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    transition: max-height 0.25s ease, opacity 0.4s ease;
+}
+
+.text-item-list {
+    font-size: 16px;
+    line-height: 1.6;
+    border: none;
+    color: #555555;
+    font-weight: 400;
+
+}
+
+li.FAQ-item.ac.active {
+    background-color: #fff;
+}
+
+li.FAQ-item.ac {
+    background-color: #fff;
+}
+
+.ac-trigger::after {
+    display: none !important;
+}
+
+li.FAQ-item {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid rgba(8, 12, 9, 0.15);
+}
+
+button.FAQ-btn.ac-trigger {
+    font: bold 16px Arial, sans-serif;
+    color: var(--color-black);
+    text-align: left;
+    width: 100%;
+    padding: 8px 32px 8px 8px;
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color .25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: stretch;
+}
+
+button.FAQ-btn.ac-trigger:focus {
+    background-color: #fff;
+}
+
+h3.question-header.ac-header {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #080c09;
+} */
+
+
+
+section#faq.FAQ-section.container {
+    padding: 48px 0;
+    background-color: #fff;
+}
+.FAQ-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #080c09;
+    margin-bottom: 32px;
+}
+
+/* .accordion-container-FAQ {
+    min-width: 320px;
+    margin: 0 auto;
+} */
+
+.FAQ-list,
+ul.FAQ-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+li.FAQ-item,
+li.FAQ-item.ac {
+    border: none;
+    border-bottom: 1px solid rgba(8, 12, 9, 0.15);
+    max-width: 865px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    /* transition: background-color 0.25s ease; */
+}
+
+li.FAQ-item:hover,
+li.FAQ-item.ac:hover {
+    background-color: #fff;
+}
+
+/* Запитання */
+.question,
+div.question.ac-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    border: none;
+}
+
+button.FAQ-btn,
+button.FAQ-btn.ac-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 23px 0;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+h3.question-header,
+h3.question-header.ac-header {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #080c09;
+    margin: 0;
+    /* padding-right: 24px; */
+}
+
+/* Іконка */
+.FAQ-icon,
+.question .FAQ-icon {
+    /* flex-shrink: 0; */
+    fill: #080c09;
+    transition: transform 0.25s ease;
+}
+
+.ac.is-active .FAQ-icon,
+li.FAQ-item.active .FAQ-icon {
+    transform: rotate(180deg);
+}
+
+/* Панель відповіді */
+.ac-panel,
+li.FAQ-item .ac-panel {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.25s ease, opacity 0.25s ease;
+}
+
+.ac.is-active .ac-panel,
+li.FAQ-item.active .ac-panel {
+    max-height: 100%;
+    padding-bottom: 24px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.text-item-list,
+p.text-item-list.ac-text {
+    font-size: 16px !important;
+    font-family: "Raleway", sans-serif !important;
+    line-height: 1.6 !important;
+    color: #080c09 !important;
+    font-weight: 400 !important;
+    padding: 0 !important;
+    padding-bottom: 24px !important;
+}
+
+
+
+/* Вимикаємо дефолтний plus від accordion-js */
+.ac-trigger::after {
+    display: none !important;
+}
+
+/* ==== Адаптиви ==== */
+@media only screen and (min-width: 768px) {
+    .FAQ-title {
+        font-size: 48px;
+    }
+
+    h3.question-header,
+    h3.question-header.ac-header {
+        font-size: 18px;
+    }
+
+}
+@media only screen and (min-width: 1440px) {
+    section#faq.FAQ-section.container {
+        padding: 80px 264px;
+
+    }
+}
