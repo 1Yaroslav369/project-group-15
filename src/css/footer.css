@@ -1,6 +1,8 @@
 .footer {
   background-color: #73131d;
   /* padding: 26px 20px 32px 20px; */
+  padding-top: 26px;
+  padding-bottom: 32px;
 }
 
 .footer-wrap {
