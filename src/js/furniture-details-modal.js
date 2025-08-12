@@ -112,7 +112,7 @@ export function createModalMarkup(item) {
               <div class="name-details">
               <h2 class="name">${item.name}</h2>
               <p class="type">${item.type}</p>
-              </div>
+
               <div class="details">
               <p class="price">${item.price} грн</p>
               <div class="raty" data-score="${item.rate || 0}"></div>
@@ -124,5 +124,7 @@ export function createModalMarkup(item) {
               <p class="sizes">Розміри: ${item.sizes}</p>
               <button class="btn-order" type="submit">Перейти до замовлення</button>
               </div>
+              </div>
+              
   `;
 }
