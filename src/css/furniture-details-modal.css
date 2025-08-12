@@ -109,7 +109,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 24px;
 }
 
 .price {
@@ -118,6 +117,7 @@
   line-height: 1.4;
   letter-spacing: 0.01em;
   color: #080c09;
+  margin-bottom: 24px;
 }
 
 .raty {
@@ -131,6 +131,7 @@
 }
 
 .colors {
+  margin-bottom: 24px;
 }
 
 .span-color {
@@ -172,6 +173,7 @@
   font-size: 16px;
   line-height: 1.6;
   color: #080c09;
+  margin-bottom: 32px;
 }
 
 .sizes {
@@ -179,7 +181,7 @@
   font-size: 16px;
   line-height: 1.6;
   color: #080c09;
-  padding-top: 8px;
+  margin-bottom: 24px;
 }
 
 .btn-order {
@@ -316,7 +318,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 16px;
     margin-left: auto;
   }
 
@@ -334,9 +335,5 @@
     max-width: 358px;
     word-wrap: break-word;
     overflow-wrap: break-word;
-  }
-
-  .sizes {
-    padding-bottom: 8px;
   }
 }
