@@ -1,34 +1,39 @@
 import axios from 'axios';
-import 'izitoast/dist/css/iziToast.min.css';
-
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const closeModalBtn = document.querySelector('.modal-close-btn');
 const modal = document.querySelector('.modal-overlay');
+const closeModalBtn = document.querySelector('.modal-close-btn');
 const form = document.querySelector('.modal-form');
 
-closeModalBtn.addEventListener('click', hideModal);
-modal.addEventListener('click', event => {
-  if (event.target === modal) {
-    hideModal();
-  }
+closeModalBtn.addEventListener('click', hideOrderModal);
+modal.addEventListener('click', e => {
+  if (e.target === modal) hideOrderModal();
 });
-document.addEventListener('keydown', handleEscapeKey);
 
-export function hideModal() {
-  modal.classList.toggle('is-open');
+export function openOrderModal() {
+  modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  document.addEventListener('keydown', handleEscapeKey);
+}
+
+export function hideOrderModal() {
+  modal.classList.remove('is-open');
+
+  if (document.querySelector('.modal-furniture.is-hidden')) {
+    document.body.style.overflow = '';
+  }
+
   document.removeEventListener('keydown', handleEscapeKey);
 }
 
-function handleEscapeKey(event) {
-  if (event.key === 'Escape') {
-    hideModal();
-  }
+function handleEscapeKey(e) {
+  if (e.key === 'Escape') hideOrderModal();
 }
 
-form.addEventListener('submit', async event => {
-  event.preventDefault();
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
   const data = {
     email: form.elements['user-email'].value,
     phone: form.elements['phone'].value,
@@ -36,28 +41,24 @@ form.addEventListener('submit', async event => {
     color: '#1212ca',
     comment: form.elements['user-comment'].value,
   };
+
   try {
-    const response = await axios.post(
-      'https://furniture-store.b.goit.study/api/orders',
-      data,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    await axios.post('https://furniture-store.b.goit.study/api/orders', data, {
+      headers: { 'Content-Type': 'application/json' },
+    });
+
     iziToast.success({
       title: 'OK',
       message: 'Замовлення успішно відправлено!',
       position: 'topRight',
     });
-    hideModal();
+
+    hideOrderModal();
     form.reset();
   } catch (error) {
-    console.error('Помилка відправки:', error);
     iziToast.error({
       title: 'Error',
-      message: error.response.data.message,
+      message: error.response?.data?.message || 'Помилка відправки замовлення',
       position: 'topRight',
     });
   }
