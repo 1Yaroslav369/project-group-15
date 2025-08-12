@@ -67,12 +67,13 @@ function handleOutsideClick(e) {
 function handleEscClose(e) {
   if (e.key === 'Escape' && !furniture.classList.contains('is-hidden'))
     closeModal();
+  openOrderModal();
 }
 
 document.addEventListener('click', e => {
   if (e.target.closest('.btn-order')) {
     openOrderModal();
-    
+    closeModal();
   }
 });
 
