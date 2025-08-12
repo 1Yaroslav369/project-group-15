@@ -11,6 +11,7 @@ export function getFurnitureById(id) {
   if (item) {
     openModal(item);
   }
+  
 }
 
 function openModal(item) {
@@ -71,6 +72,7 @@ function handleEscClose(e) {
 document.addEventListener('click', e => {
   if (e.target.closest('.btn-order')) {
     openOrderModal();
+    
   }
 });
 

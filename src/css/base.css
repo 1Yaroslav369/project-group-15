@@ -1,4 +1,7 @@
+
+
 body {
+  scroll-behavior: smooth;
   font-family: 'Raleway', Bold;
   background-color: #fff;
   font-size: 18px;
@@ -7,6 +10,7 @@ body {
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
 }
@@ -14,4 +18,3 @@ main:has(.back-link) {
 
 
 @import 'css-star-rating/dist/css/star-rating.min.css';
-
