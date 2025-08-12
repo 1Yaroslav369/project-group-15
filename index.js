@@ -8,7 +8,7 @@ import{A as I,a as M,i as d,S as F,N as R,P as O}from"./assets/vendor-WM8bFQgC.j
               <div class="name-details">
               <h2 class="name">${e.name}</h2>
               <p class="type">${e.type}</p>
-              </div>
+
               <div class="details">
               <p class="price">${e.price} грн</p>
               <div class="raty" data-score="${e.rate||0}"></div>
@@ -20,6 +20,8 @@ import{A as I,a as M,i as d,S as F,N as R,P as O}from"./assets/vendor-WM8bFQgC.j
               <p class="sizes">Розміри: ${e.sizes}</p>
               <button class="btn-order" type="submit">Перейти до замовлення</button>
               </div>
+              </div>
+              
   `}const L="https://furniture-store.b.goit.study/api",b=document.querySelectorAll(".category-card"),w=document.querySelector(".furniture-list"),E=document.querySelector(".load-more-button"),P=document.querySelector(".loader");let k="",g=1,p=[];function Q(){P.classList.remove("hidden")}function V(){P.classList.add("hidden")}async function q(e="",s=1,n=8){Q();try{const r=e?`${L}/furnitures?category=${e}&limit=${n}&page=${s}`:`${L}/furnitures?limit=${n}&page=${s}`,o=(await M.get(r)).data;if(s===1?p=[...o.furnitures]:p=[...p,...o.furnitures],!o.furnitures||o.furnitures.length===0){d.info({title:"Увага",message:"Більше товарів цієї категорії немає в наявності",position:"topRight"}),E.disabled=!0;return}_(o.furnitures,s===1),E.disabled=o.furnitures.length<n}catch(r){console.error("Помилка при отриманні меблів:",r),d.error({title:"Помилка",message:"Не вдалося завантажити меблі. Спробуйте ще раз.",position:"topRight"})}finally{V()}}function _(e,s=!0){const n=e.map(r=>{const t=r.color.map(o=>`<span class="furniture-color-circle" style="background-color: ${o};"></span>`).join("");return`
         <li class="furniture-card" data-id="${r._id}">
           <img src="${r.images[0]}" alt="${r.name}" class="furniture-image" />
