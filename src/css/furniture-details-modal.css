@@ -26,7 +26,7 @@
   border-radius: 8px;
   padding: 64px 20px;
   width: 335px;
-  height: 1155px;
+  height: inherit;
   overflow-y: auto;
   background: #fff;
   box-sizing: border-box;
